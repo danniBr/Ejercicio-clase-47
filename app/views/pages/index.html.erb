@@ -1,28 +1,10 @@
 <h1>Creador de color</h1>
-<style>
-	#color {
-		width: 200px;
-		background-color: rgb(200, 200, 200);
-		height: 200px;
-	}
-</style>
 
 <input type="text" value="200" data-max="255" class="dial" id="red">
 <input type="text" value="200" data-max="255" class="dial" id="green">
 <input type="text" value="200" data-max="255" class="dial" id="blue">
 
 <p> color: <span id="texto"></span></p>
-<div id="color">
-</div>
 
-<script>
-    $(".dial").knob({
-        'release' : function (v) { 
-		  
-		  var color_rgb ='rgb(' + $('#red').val() + ',' + $('#green').val() + ',' + $('#blue').val() + ')';
+<div id="color"></div>
 
-		  $('#color').css('background-color',color_rgb);
-		  $('#texto').text(color_rgb);
-        }
-    });
-</script>
